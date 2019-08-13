@@ -1,0 +1,29 @@
+
+ <h3> <%= @post.title %> </h3> 
+  <%= @post.content %>
+  <br>
+  <a href="<%= @post.url %>"> URL </a>
+
+<!-- Only the Parents are shown -->
+
+<ul>
+  <% @post.comments.where(parent_comment_id: nil).each do |comment| %>
+    <br>
+    <li>
+      <%= comment.author.username %>
+    </li>
+    <li>
+      <%= comment.content %>
+    </li>
+    <a href=<%= comment_url(comment)%>>Children</a>
+  <% end %>
+</ul>
+
+<a href=<%= new_post_comment_url(@post) %>> Add Comment </a>
+  
+
+
+
+
+
+  

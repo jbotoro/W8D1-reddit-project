@@ -1,0 +1,10 @@
+<h5> Show Comment </h5>
+<% top_comment = Comment.find_by(id: params[:id]) %>
+  <%= top_comment.content %>
+  <%= top_comment.author.username %>
+<% top_comment.child_comments.each do |comment| %>
+  <%= comment.content %>
+  <%= comment.author.username %>
+  <a href=<%= comment_url(comment)%>>Children</a>
+  <br>
+<% end %>

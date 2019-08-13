@@ -1,0 +1,32 @@
+/* PHASE 2: Notifications */
+.badge {
+  list-style: circle;
+  background-color:black;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 2px;
+  padding-top: -1px;
+  font-size: 15px;
+
+  
+ 
+}
+
+.not {
+  position: absolute;
+  visibility: hidden;
+
+}
+
+.header-list > li {
+  position: relative;
+  
+
+}
+.header-list > li:hover .not {
+  
+    visibility: visible;
+}
+  
